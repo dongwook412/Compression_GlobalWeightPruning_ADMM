@@ -10,9 +10,7 @@
 - 본 논문에서는 전역으로 제거 비율을 설정하여 ADMM 기반 Weight pruning을 수행하여 레이어 별 제거 비율을 자동으로 설정
 - 점진적으로 레이어를 추가한 모델, LeNet-5와 같이 작은 모델뿐만 아니라 AlexNet, YOLOv4와 같은 비교적 큰 모델에 사용할 수 있음을 실험으로 보임
 
-## 시작하기
-
-### 사용 환경
+## 사용 환경
 
 - CUDA Toolkit version은 10.1 이상을 권장
 
@@ -28,14 +26,26 @@ easydict
 pillow
 ```
 
+## 학습
+
+### Gradual_increase_layer 및 LeNet-5
+- 폴더 내에 train.py 실행
+
 ### 학습된 AlexNet weights 가져오기
 - [Alexnet.weights](https://www.cs.toronto.edu/~guerzhoy/tf_alexnet/bvlc_alexnet.npy)에서 다운로드한 파일을 ./AlexNet/ 경로에 추가
-- 
-## Running the tests / 테스트의 실행
 
-어떻게 테스트가 이 시스템에서 돌아가는지에 대한 설명을 합니다
+### 학습된 YOLOv4 weights 가져오기
+- 업데이트중
 
-### 테스트는 이런 식으로 동작합니다
+## 제안 모델 실행
+
+각 모델은 훈련된 가중치를 기반으로 수행
+
+### Gradual_increase_layer 및 LeNet-5
+
+### AlexNet
+
+### YOLOv4
 
 왜 이렇게 동작하는지, 설명합니다
 
