@@ -28,13 +28,13 @@ pillow
 
 ## 학습
 
-### Gradual_increase_layer 및 LeNet-5
+1. Gradual_increase_layer 및 LeNet-5
 - 폴더 내에 train.py 실행
 
-### 학습된 AlexNet weights 가져오기
+2. 학습된 AlexNet weights 가져오기
 - [Alexnet.weights](https://www.cs.toronto.edu/~guerzhoy/tf_alexnet/bvlc_alexnet.npy)에서 다운로드한 파일을 ./AlexNet/ 경로에 추가
 
-### 학습된 YOLOv4 weights 가져오기
+3. 학습된 YOLOv4 weights 가져오기
 - 업데이트중
 
 ## 제안 모델 실행
