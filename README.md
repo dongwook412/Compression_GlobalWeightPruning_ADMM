@@ -26,15 +26,17 @@ easydict
 pillow
 ```
 
-## 학습
+## 초기 설정
 
 1. Gradual_increase_layer 및 LeNet-5
 - 폴더 내에 train.py 실행
 
-2. 학습된 AlexNet weights 가져오기
+2. AlexNet
 - [Alexnet.weights](https://www.cs.toronto.edu/~guerzhoy/tf_alexnet/bvlc_alexnet.npy)에서 다운로드한 파일을 ./AlexNet/ 경로에 추가
+- [ImageNet_ILSVRC2012](https://imagenet.stanford.edu/challenges/LSVRC/index.php)에서 ImageNet 데이터 다운로드
+- 폴더 내에 preprocess_imagenet.py 실행하여 레이블 수정
 
-3. 학습된 YOLOv4 weights 가져오기
+3. YOLOv4
 - 업데이트중
 
 ## 제안 모델 실행
@@ -49,27 +51,27 @@ k_step : ADMM step number
 epochs : ADMM step(W update) training epoch
 retraining_epochs : After ADMM step, retraining epoch
 steps_per_epoch : Number of steps per epoch
+rho : ADMM loss penalty parameter
+p_lambda : Weight regulization parameter
+all_percent : Removal percent
 learning_rate
 batch_size
-$$
 ```
 
+1. Gradual_increase_layer 및 LeNet-5
 
-
-### Gradual_increase_layer 및 LeNet-5
 ```
 python admm_pruning.py
 ```
 
-### AlexNet
+2. AlexNet
+
 ```
 python admm_ADMM_step.py
 python admm_Retraining_step.py
 ```
 
-### YOLOv4
-
-왜 이렇게 동작하는지, 설명합니다
+3. YOLOv4
 
 ```
 예시
