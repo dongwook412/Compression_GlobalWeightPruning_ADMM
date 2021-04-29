@@ -1,10 +1,14 @@
-# Compression of deep learning models through global weight pruning using ADMM
+# ADMM 기반 전역 가중치 제거를 통한 딥러닝 모델의 압축
 
-# Updating...
+# 업데이트중
 
-- Deep learning, which has recently shown excellent performance, has a problem that the amount of computation and required memory are large
-- Model compression is very useful because it saves memory and reduces storage size while maintaining model performance. 
-- Model compression methods reduce the number of edges by pruning weights that are deemed unnecessary in the calculation. 
+- 딥러닝 모델이 높은 성능을 달성하기 위해서는 모델의 가중치 수가 많아진다는 문제점 존재
+- Model Compression은 메모리를 절약하고 모델의 저장 크기를 감소시키며 계산 요구사항을 줄일 수 있어 매우 유용
+- Model Compression의 기법들 중 하나인 Weight pruning은 계산 그래프에서 edge를 줄여 계산량을 감소
+- ADMM 기반 Weight pruning은 non-convex 최적화 식을 효과적으로 처리하여 빠른 시간 내에 성능 손실 없이 효과적인 sparsity 달성 가능
+- 하지만 ADMM 기반의 방법들은 구조적으로 제거 비율을 설정하므로 현실적으로 Weight pruning이 필요한 큰 모델에 적용하기 힘듬
+- 본 논문에서는 전역으로 제거 비율을 설정하여 ADMM 기반 Weight pruning을 수행하여 레이어 별 제거 비율을 자동으로 설정
+- 점진적으로 레이어를 추가한 모델, LeNet-5와 같이 작은 모델뿐만 아니라 AlexNet, YOLOv4와 같은 비교적 큰 모델에 사용할 수 있음을 실험으로 보임
 
 **[뱃지나 프로젝트에 관한 이미지들이 이 위치에 들어가면 좋습니다]**  
 One Paragraph of project description goes here / 프로젝트의 전반적인 내용에 대한 요약을 여기에 적습니다
