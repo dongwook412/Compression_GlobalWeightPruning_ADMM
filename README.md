@@ -1,6 +1,6 @@
-# ADMM 기반 전역 가중치 제거를 통한 딥러닝 모델의 압축
-
 # 업데이트중
+
+# ADMM 기반 전역 가중치 제거를 통한 딥러닝 모델의 압축
 
 - 딥러닝 모델이 높은 성능을 달성하기 위해서는 모델의 가중치 수가 많아진다는 문제점 존재
 - Model Compression은 메모리를 절약하고 모델의 저장 크기를 감소시키며 계산 요구사항을 줄일 수 있어 매우 유용
@@ -10,26 +10,27 @@
 - 본 논문에서는 전역으로 제거 비율을 설정하여 ADMM 기반 Weight pruning을 수행하여 레이어 별 제거 비율을 자동으로 설정
 - 점진적으로 레이어를 추가한 모델, LeNet-5와 같이 작은 모델뿐만 아니라 AlexNet, YOLOv4와 같은 비교적 큰 모델에 사용할 수 있음을 실험으로 보임
 
-## Getting Started / 어떻게 시작하나요?
+## 시작하기
 
-이 곳에서 설치에 관련된 이야기를 해주시면 좋습니다.
+### 사용 환경
 
-### Prerequisites / 선행 조건
-
-아래 사항들이 설치가 되어있어야합니다.
+- CUDA Toolkit version은 10.1 이상을 권장
 
 ```
-예시
+tensorflow-gpu==2.3.0rc0
+opencv-python==4.1.1.26
+numpy
+lxml
+tqdm
+absl-py
+matplotlib
+easydict
+pillow
 ```
 
-### Installing / 설치
-
-아래 사항들로 현 프로젝트에 관한 모듈들을 설치할 수 있습니다.
-
-```
-예시
-```
-
+### 학습된 AlexNet weights 가져오기
+- [Alexnet.weights](https://www.cs.toronto.edu/~guerzhoy/tf_alexnet/bvlc_alexnet.npy)에서 다운로드한 파일을 ./AlexNet/ 경로에 추가
+- 
 ## Running the tests / 테스트의 실행
 
 어떻게 테스트가 이 시스템에서 돌아가는지에 대한 설명을 합니다
