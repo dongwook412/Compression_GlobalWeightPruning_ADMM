@@ -12,7 +12,7 @@
 
 ## 사용 환경
 
-- CUDA Toolkit version은 10.1 이상을 권장
+CUDA Toolkit version은 10.1 이상을 권장
 
 ```
 tensorflow-gpu==2.3.0rc0
@@ -40,6 +40,9 @@ pillow
 ## 제안 모델 실행
 
 ### 파라미터
+각 모델은 훈련된 가중치를 기반으로 수행하며, 각 폴더 내에서 작동
+
+
 ```
 k_step : ADMM step number
 epochs : ADMM step(W update) training epoch
@@ -50,7 +53,7 @@ batch_size
 $$
 ```
 
-각 모델은 훈련된 가중치를 기반으로 수행하며, 각 폴더 내에서 작동
+
 
 ### Gradual_increase_layer 및 LeNet-5
 ```
