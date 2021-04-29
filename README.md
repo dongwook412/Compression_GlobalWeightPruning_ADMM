@@ -39,11 +39,29 @@ pillow
 
 ## 제안 모델 실행
 
-각 모델은 훈련된 가중치를 기반으로 수행
+### 파라미터
+```
+k_step : ADMM step number
+epochs : ADMM step(W update) training epoch
+retraining_epochs : After ADMM step, retraining epoch
+steps_per_epoch : Number of steps per epoch
+learning_rate
+batch_size
+$$
+```
+
+각 모델은 훈련된 가중치를 기반으로 수행하며, 각 폴더 내에서 작동
 
 ### Gradual_increase_layer 및 LeNet-5
+```
+python admm_pruning.py
+```
 
 ### AlexNet
+```
+python admm_ADMM_step.py
+python admm_Retraining_step.py
+```
 
 ### YOLOv4
 
