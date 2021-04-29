@@ -28,15 +28,15 @@ pillow
 
 ## 초기 설정
 
-1. Gradual_increase_layer 및 LeNet-5
+#### 1) Gradual_increase_layer 및 LeNet-5
 - 폴더 내에 train.py 실행
 
-2. AlexNet
+#### 2) AlexNet
 - [Alexnet.weights](https://www.cs.toronto.edu/~guerzhoy/tf_alexnet/bvlc_alexnet.npy)에서 다운로드한 파일을 ./AlexNet/ 경로에 추가
 - [ImageNet_ILSVRC2012](https://imagenet.stanford.edu/challenges/LSVRC/index.php)에서 ImageNet 데이터 다운로드
 - 폴더 내에 preprocess_imagenet.py 실행하여 레이블 수정
 
-3. YOLOv4
+#### 3) YOLOv4
 - 업데이트중
 
 ## 제안 모델 실행
@@ -44,7 +44,7 @@ pillow
 각 모델은 훈련된 가중치를 기반으로 수행하며, 각 폴더 내에서 작동
 
 
-### 파라미터
+#### 파라미터
 
 ```
 k_step : ADMM step number
@@ -58,23 +58,23 @@ learning_rate
 batch_size
 ```
 
-1. Gradual_increase_layer 및 LeNet-5
+#### 1) Gradual_increase_layer 및 LeNet-5
 
 ```
 python admm_pruning.py
 ```
 
-2. AlexNet
+#### 2) AlexNet
 
 ```
 python admm_ADMM_step.py
 python admm_Retraining_step.py
 ```
 
-3. YOLOv4
+#### 3) YOLOv4
 
 ```
-예시
+업데이트중
 ```
 
 ### 테스트는 이런 식으로 작성하시면 됩니다
