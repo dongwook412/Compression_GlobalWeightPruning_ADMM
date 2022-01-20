@@ -31,13 +31,9 @@ pillow
 #### 1) Gradual_increase_layer 및 LeNet-5
 - 폴더 내에 train.py 실행
 
-#### 2) AlexNet
-- [Alexnet.weights](https://www.cs.toronto.edu/~guerzhoy/tf_alexnet/bvlc_alexnet.npy)에서 다운로드한 파일을 ./AlexNet/ 경로에 추가
-- [ImageNet_ILSVRC2012](https://imagenet.stanford.edu/challenges/LSVRC/index.php)에서 ImageNet 데이터 다운로드
-- 폴더 내에 preprocess_imagenet.py 실행하여 레이블 수정
+#### 2) Resnet-56
+- 폴더 내에 train.py 실행
 
-#### 3) YOLOv4
-- 업데이트중
 
 ## 제안 모델 실행
 
@@ -64,21 +60,13 @@ batch_size
 python admm_pruning.py
 ```
 
-#### 2) AlexNet
+#### 2) Resnet-56
 
 ```
-python admm_ADMM_step.py
-python admm_Retraining_step.py
+python admm_pruning_gpu.py
 ```
 
-#### 3) YOLOv4
 
-```
-업데이트중
-```
-
-## 시각화
-업데이트중
 
 ## 결과
 
