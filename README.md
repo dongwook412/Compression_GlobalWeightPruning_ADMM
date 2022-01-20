@@ -67,6 +67,7 @@ python admm_pruning_gpu.py
 
 ## 결과
 
+<p align="center"><img src="./img/table1,2.png"></p>
 
 
 ## Contributiong / 기여자
